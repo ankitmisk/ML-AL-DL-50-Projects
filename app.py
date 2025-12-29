@@ -89,7 +89,7 @@ st.markdown(" ")
 # ============================================================
 
 PROJECTS = {}
-project_folder = "projects"
+project_folder = "PROJECTS"
 
 if not os.path.exists(project_folder):
     os.makedirs(project_folder)
