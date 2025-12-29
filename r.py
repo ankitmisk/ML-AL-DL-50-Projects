@@ -1,0 +1,26 @@
+# streamlit==1.32.0
+# pandas==2.1.4
+# numpy==1.26.4
+# scikit-learn==1.4.0
+# tensorflow==2.15.0
+# torch==2.1.2
+# transformers==4.37.2
+# sentencepiece==0.1.99
+# datasets==2.16.1
+# yfinance==0.2.33
+# matplotlib==3.8.2
+# seaborn==0.12.2
+# mlxtend==0.23.0
+# pypfopt==1.5.5
+# statsmodels==0.14.1
+# beautifulsoup4==4.12.3
+# opencv-python==4.8.1.78
+# nltk==3.8.1
+# tqdm==4.66.1
+# python-dotenv==1.0.1
+# Pillow==10.2.0
+# joblib==1.3.2
+# scipy==1.11.4
+# whisper==1.1.10  # optional, or use openai-whisper
+# openai-whisper==20230314
+# requests==2.31.0
