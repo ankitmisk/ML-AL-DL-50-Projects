@@ -179,22 +179,27 @@ with tab2:
 # TAB 3: CODE
 # ============================================================
 with tab3:
-
     st.markdown("### 💻 Complete Project Code")
 
-    # Copy Code Button JS
-    st.markdown("""
-    <script>
-    function copyCode() {
-        navigator.clipboard.writeText(document.getElementById('codeblock').innerText);
-        alert("Code copied!");
-    }
-    </script>
-    """, unsafe_allow_html=True)
+    # Convert code to plain text
+    code_text = project['code']
 
-    st.markdown('<button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>', unsafe_allow_html=True)
+    # --- COPY BUTTON (WORKING WITHOUT JAVASCRIPT) ---
+    # Uses Streamlit built-in clipboard support via text_input hack.
+    st.text_input("Click ↓ then press CTRL+C to copy the full code:",
+                  value=code_text,
+                  key="copy_code_box")
 
-    st.markdown(f"<pre id='codeblock' class='glass fade'>{project['code']}</pre>", unsafe_allow_html=True)
+    # --- DOWNLOAD BUTTON FOR CODE FILE ---
+    st.download_button(
+        label="📥 Download Code",
+        data=code_text,
+        file_name=f"{project['name'].replace(' ','_')}_code.py",
+        mime="text/plain"
+    )
+
+    # --- Proper Code Display ---
+    st.code(code_text, language="python")
 
 # ============================================================
 # TAB 4: FILES LIST
